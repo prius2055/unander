@@ -1,0 +1,1313 @@
+/*
+BREAKPOINTS
+0 - 600px:          phone               :phone
+600 - 900px:        tablet-portrait     :tab-port
+900 - 1200px:       tablet-landscape    :tab-land
+[1200 - 1800px]:    big-desktop         :big-desktop
+
+
+color1:#e67e22;
+
+ color2: #5a035a;
+
+ color3:#2e3135;
+
+
+*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+
+    transform: translateX(-100%);
+  }
+  80% {
+    opacity: 0.5;
+    transform: translateX(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  80% {
+    opacity: 0.5;
+    transform: translateX(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*======================================================
+                      ALL INITIALLIZATIONS
+  ========================================================*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+}
+
+/* @media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+    /*< 1200px 1rem = 9px, 9/16, 56.25%   Note: IF A SCREEN SIZE IS TRUE FOR 2 SETS OF MEDIA QUERIES
+                                                                      THE QUERIES SHOULD BE WRITTEN IN DESCENDING ORDER FOR 
+                                                                      DESKTOP FIRST APPROACH, LIKE 700px,THE WIDTH TAKES THE SIZE
+                                                                      OF THE LAST DECLARATION. SO THE MEDIA QUERY WITH THE LOWER
+                                                                      SCREEN SIZE SHOULD BE WRITTEN LAST
+  }
+} */
+
+/* @media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font: size 75%;
+  }
+} */
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #41464b;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: center; */
+  /* backface-visibility: hidden; */
+  /* HIDES THE OTHER SIDE OF THE VISIBILITY*/
+}
+
+.heading-primary--main {
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
+  font-weight: 400;
+
+  animation-name: moveInUp;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+/* @media (max-width: 56.25em) {
+  .heading-primary--main {
+    letter-spacing: 2rem;
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 0.5rem;
+    font-size: 5rem;
+  }
+} */
+
+.heading-primary--sub {
+  font-size: 2rem;
+  letter-spacing: 1.75rem;
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 6rem;
+  animation: moveInRight 2s ease-in;
+  /* A SHORT HAND WAY OF WRITING THE ANIMATION PROPERTY*/
+}
+
+/* @media (max-width: 56.25em) {
+  .heading-primary--sub {
+    letter-spacing: 1.5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 0.5rem;
+  }
+} */
+
+.heading-secondary {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #5a035a;
+  /*TO APPLY A COLOR GRADIENT TO AN OBJECT*/
+  display: inline-block;
+  -webkit-background-clip: text;
+  /*USED TO RESTRICT THE BACKGROUND COLOR TO APPLY ONLY ON THE TEXT*/
+  color: transparent;
+  /*MAKES THE COLOR OF THE TEXT TRANSPARENT, SO THAT THE BACKGROUND COLOR CAN BE VISIBLE*/
+  transition: all 0.2s;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem 0 2rem 5rem;
+}
+
+/* @media (max-width: 75em) {
+
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  line 51, ../Natours/sass/base/_typography.scss 
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+} 
+
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+}*/
+
+.heading-secondary:hover {
+  transform: scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(109, 88, 88, 0.2);
+}
+
+.heading-tetiary {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+/* @media (max-width: 56.25em) {
+  .u-margin-top-big {
+    margin: 3rem 3rem 0 -3rem !important;
+  }
+} */
+
+/* BUTTONS */
+
+.btn,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10rem;
+  padding: 2rem 4rem;
+  position: relative;
+  transition: all 0.2s;
+  /* HERE WE USE THE TRANSITION PROPERTY FOR ANIMATION*
+                              IT IS PLACED AT THR link/parent STATE OF THE OBJECT TO BE ANIMATED,
+                              WITH all MEANING THAT ALL THE PROPERTY IN THE hover, active 
+                              and every other state SHOULD BE ANIMATED*/
+  border: none;
+  cursor: pointer;
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+/* line 29, ../Natours/sass/component/_button.scss */
+.btn--green {
+  background-color: #7ed56f;
+  color: #fff;
+}
+
+/* line 33, ../Natours/sass/component/_button.scss */
+.btn--green::after {
+  background-color: #fff;
+}
+
+/* line 38, ../Natours/sass/component/_button.scss */
+.btn:hover {
+  transform: translateY(-3px);
+  /*REFERENCE PT IS THE LINK STATE*/
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+/* line 42, ../Natours/sass/component/_button.scss */
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+/* line 48, ../Natours/sass/component/_button.scss */
+.btn:active,
+.btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* line 55, ../Natours/sass/component/_button.scss */
+.btn::after {
+  /* THIS IS LIKE ADDING A VIRTUAL ELEMENT AFTER THE MAIN ELEMENT*/
+  content: "";
+  display: inline-block;
+  /* SHOULD BE SAME AS THE MAIN ELEMENT*/
+  height: 100%;
+  /* SHOULD BE SAME AS THE MAIN ELEMENT*/
+  width: 100%;
+  /* SHOULD BE SAME AS THE MAIN ELEMENT*/
+  border-radius: 10rem;
+  /* SHOULD BE SAME AS THE MAIN ELEMENT*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /*USED WHEN PLACING ELEMENTS ON TOP EACH OTHER NEGATIVE MEANS IT IS BEHIND AN ELEMENT*/
+  transition: all 0.4s;
+}
+
+/* line 68, ../Natours/sass/component/_button.scss */
+.btn--animated {
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.75s;
+  animation-fill-mode: backwards;
+  /* SETS THE OBJECT AT THE INITIAL STATE/ 
+                                          RELOAD STATE I.E THE STATE BEFORE ANIMATION 
+                                          OCCURS TO ZERO, FORCES THE ANIMATION
+                                          OPACITY TO ZERO AT PAGE RELOAD*/
+}
+
+/* line 82, ../Natours/sass/component/_button.scss */
+.btn-text,
+.btn-text:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #28b485;
+  border-bottom: 1px solid #28b485;
+  padding: 3px;
+  transition: all 0.2s;
+}
+
+/* line 92, ../Natours/sass/component/_button.scss */
+.btn-text:hover {
+  color: #fff;
+  background-color: #28b485;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* line 99, ../Natours/sass/component/_button.scss */
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+}
+
+/*======================================================
+                      SECTION NAVIGATION
+  ========================================================*/
+
+.navigation-list {
+  display: flex;
+  list-style: none;
+  /*text-align: right;*/
+}
+
+.navigation-item {
+  margin: 5px;
+}
+
+.navigation-link,
+.navigation-link:visited {
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    #e67e22 50%
+  );
+  background-size: 210%;
+  /*MAKES THE background MORE THAN TWICE ITS SIZE AT THAT GIVEN POSITION*/
+  transition: all 0.4s;
+}
+
+.navigation-link:hover,
+.navigation-link:active {
+  background-position: 100%;
+  color: #000;
+}
+
+.sm-screen-header-nav {
+  display: none;
+}
+/*======================================================
+                      SECTION HEADER
+  ========================================================*/
+/* line 5, ../Natours/sass/layout/_header.scss */
+
+.header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75vh;
+  width: 100%;
+  border-bottom: none;
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7),
+    rgb(230, 126, 34)
+  );
+}
+
+.header-nav {
+  background-color: #41464b;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 5rem;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+/* @media (max-width: 56.25em) {
+  .header-nav {
+    padding-right: 5rem;
+    padding-left: 10rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .header-nav {
+    padding-right: 10rem;
+  }
+} */
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header-cover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  width: 70%;
+  height: 75vh;
+  overflow: hidden;
+}
+
+/* @media (max-width: 56.25em) {
+  .slider {
+    width: 50%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .slider {
+    width: 50%;
+  }
+} */
+
+.slider .slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 5%;
+  /* transform: translateX(0%); */
+  /* clip-path: circle(0% at 0 50%); */
+}
+
+.slider .slide.active {
+  /* clip-path: circle(150% at 0 50%); */
+
+  /* transform: translateX(100%); */
+  opacity: 100%;
+  transition: 2s ease;
+}
+
+.slider .slide img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* object-position: center; */
+}
+
+.slide p {
+  background-color: #2e3135;
+  border-radius: 50%;
+  color: white;
+  padding: 2rem;
+
+  position: absolute;
+  top: 15%;
+  left: 1%;
+  text-align: center;
+
+  font-weight: 700;
+  font-style: italic;
+  font-size: 4rem;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+/* @media (max-width: 56.25em) {
+  .slide p {
+    font-size: 3rem;
+    top: 15%;
+    left: 10%;
+  }
+} */
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: #e67e22;
+  font-family: inherit;
+  color: #fff;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider__btn-left {
+  left: 6%;
+}
+
+.slider__btn-right {
+  right: 6%;
+}
+
+.slider:hover .slider__btn {
+  opacity: 1;
+}
+
+.nav-dots {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  border: none;
+  background-color: rgba(245, 245, 245, 0.8);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  z-index: 100;
+
+  /* Only necessary when overlying images */
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7);
+}
+
+/* @media (max-width: 56.25em) {
+  .dot {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .dot {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1rem;
+  }
+} */
+
+.nav-dots .active {
+  background-color: #e67e22;
+}
+
+.header-cover-right {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* @media (max-width: 56.25em) {
+  .header-cover-right {
+    width: 50%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .header-cover-right {
+    width: 50%;
+  }
+} */
+
+/*===================================================
+                 SECTION INFO
+===================================================*/
+.section-info {
+  /* margin-top: 8rem; */
+  padding: 2rem 20rem;
+  color: #41464b;
+  font-weight: 700;
+  height: 10vh;
+  max-width: 150rem;
+
+  margin: 0 auto;
+}
+
+/* @media (max-width: 56.25em) {
+  .section-info {
+    padding-left: 35rem;
+    padding-right: 35rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .section-info {
+    padding-left: 40rem;
+    padding-right: 40rem;
+  }
+} */
+
+.info-heading-box {
+  display: flex;
+  justify-content: space-between;
+  color: #5a035a;
+  height: 100%;
+}
+
+.info-join {
+  color: #fff;
+}
+
+/* @media (max-width: 75em) {
+  .section-info {
+    padding: 3rem 5rem;
+  }
+} */
+
+.info-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.info {
+  border-right: 3px solid #41464b;
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+
+/* @media (max-width: 37.5em) {
+  .info {
+    border-right: 2.5px solid #41464b;
+  }
+} */
+
+.info-left {
+  background-color: #e67e22;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.info-left-img {
+  fill: white;
+  height: 5rem;
+  width: 5rem;
+}
+
+.info-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.info-image {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+/* @media (max-width: 56.25em) {
+  .info-image {
+    height: 12rem;
+    width: 12rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .info-image {
+    height: 8rem;
+    width: 8rem;
+  }
+} */
+
+/*===================================================
+                 SECTION ABOUT US
+===================================================*/
+.section-about {
+  padding-top: 8rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
+/* @media (max-width: 56.25em) {
+  .section-about {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .section-about {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 0 2rem;
+  }
+} */
+
+.heading-about {
+  padding-left: 0;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* @media (max-width: 37.5em) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; 
+  }
+} */
+
+.about-container-left {
+  width: 50%;
+  padding: 2rem;
+}
+
+/* @media (max-width: 37.5em) {
+  .about-container-left {
+    width: 100%;
+  }
+} */
+
+/* @media (max-width: 75em) {
+  .about-text {
+    padding: 2rem 5rem;
+  }
+} */
+
+.about-container-right {
+  height: 50rem;
+  width: 50%;
+
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+}
+
+/* @media (max-width: 37.5em) {
+  .about-container-right {
+    width: 100%;
+  }
+} */
+
+.bg-video {
+  background-color: #5a035a;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.bg-video-content {
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  object-fit: cover;
+  object-position: center;
+
+  position: fixed;
+  top: 10px;
+  left: 300px;
+}
+
+/* @media (max-width: 37.5em) {
+  .bg-video-content {
+    top: 0;
+    left: 5px;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .bg-video-content {
+    top: 0;
+    left: 20px;
+  }
+} */
+
+/*===================================================
+               SECTION SERVICES #5a035a;  #e67e22;
+===================================================*/
+.section-services {
+  /* padding: 8rem 0; */
+  margin-top: 8rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  padding-top: 8rem;
+}
+
+/* @media (max-width: 56.25em) {
+  .section-services {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .section-services {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+} */
+
+.service-cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* @media (max-width: 56.25em) {
+  .service-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+} */
+
+.card {
+  height: 52rem;
+  width: 22%;
+
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  transition: all 0.8s ease;
+}
+
+/* @media (max-width: 56.25em) {
+  .card {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+} */
+
+.card-side {
+  height: 52rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid #ccc;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+
+  transition: all 0.8s ease;
+}
+
+.card-side-front {
+  background-color: #fff;
+}
+
+.card-side-back {
+  background-image: linear-gradient(
+    to left top,
+    rgba(255, 185, 0, 0.85),
+    rgba(255, 119, 48, 0.85)
+  );
+  transform: rotateY(-180deg);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(4rem);
+}
+
+.card:hover .card-side-back {
+  transform: rotateY(0deg);
+}
+
+.card:hover .card-side-front {
+  transform: rotateY(-180deg);
+}
+
+.card-picture {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+}
+
+.card-picture-1 {
+  background-image: url(img/me-works.jpg);
+}
+
+.card-picture-2 {
+  background-image: url(img/ee-works-2.jpg);
+}
+
+.card-picture-3 {
+  background-image: url(img/ff-work.jpg);
+}
+
+.card-picture-4 {
+  background-image: url(img/safety-work.jpg);
+}
+
+.card-heading {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 300;
+  position: absolute;
+  text-align: right;
+  top: 12rem;
+  right: 2rem;
+  width: 75%;
+}
+
+.card-heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  /*THIS MAKES A SINGLE OBJECT BEHAVE LIKE TWO BLOCK ELEMENTS.THUS, 
+                                                  ANY PROPERTY SPECIFIED ON THE ELEMENT APPLIES TO THE OTHER 
+                                                  PARTS OF THE ELEMENT AS THOUGH THE ELEMENTS ARE SEPARATE BLOCKS,
+                                                  IN THIS CASE THE padding PROPERTY IS APPLIED TO THE TWO LINE BREAKS
+                                                  OF THE ELEMENT, MAKING THE LINE BREAKS BEHAVE LIKE TWO DIFFERENT
+                                                  BLOCK ELEMENTS*/
+  box-decoration-break: clone;
+}
+
+.card-heading-span-1 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(41, 152, 255, 0.85),
+    rgba(86, 67, 250, 0.85)
+  );
+}
+
+.card-heading-span-2 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 185, 0, 0.85),
+    rgba(255, 119, 48, 0.85)
+      /* rgba(241, 73, 7, 0.85),
+    rgba(253, 53, 4, 0.85) */
+  );
+}
+
+.card-heading-span-4 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(248, 99, 99, 0.85),
+    rgba(255, 0, 0, 0.85)
+  );
+}
+
+.card-heading-span-5 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(95, 247, 95, 0.85),
+    rgba(0, 128, 0, 0.85)
+  );
+}
+
+.card-details {
+  padding: 3rem;
+  text-align: center;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-details ul {
+  margin: 0 auto;
+  list-style: none;
+  color: whitesmoke;
+  font-size: 2rem;
+  font-weight: 700;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-details ul li {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: #5a035a;
+  transition: all 0.2s ease;
+}
+
+.card-details ul li:hover {
+  transform: scale(1.2);
+}
+
+/*===================================================
+                 SECTION CLIENTS
+===================================================*/
+
+.section-clients {
+  padding-top: 8rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
+/* @media (max-width: 56.25em) {
+  .section-clients {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .section-clients {
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+} */
+
+.client-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* @media (max-width: 56.25em) {
+  .client-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+} */
+
+.client-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client {
+  padding: 40px 3px;
+  margin: 0 5px;
+  color: #5a035a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/*===================================================
+      SECTION CONTACT #5a035a;  #e67e22;  #41464b;
+===================================================*/
+.section-contact {
+  padding: 3rem 0;
+  margin-top: 8rem;
+  background-color: #e67e22;
+}
+
+/* @media (max-width: 56.25em) {
+  .section-contact h2 {
+    padding-left: 10rem;
+  }
+} */
+
+.heading-contact {
+  margin-left: 20rem;
+}
+
+.contact-details {
+  background-image: linear-gradient(
+      105deg,
+      rgba(245, 245, 245, 0.79) 0%,
+      rgba(245, 245, 245, 0.79) 45%,
+      transparent 45%
+    ),
+    url(img/contact-call-2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: #41464b;
+  border-radius: 5px;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 8rem;
+  overflow: visible;
+}
+
+/* @media (max-width: 37.5em) {
+  .contact-details {
+    background-image: linear-gradient(
+        105deg,
+        rgba(245, 245, 245, 0.79) 0%,
+        rgba(245, 245, 245, 0.79) 50%,
+        transparent 50%
+      ),
+      url(img/contact-call-2.jpeg);
+
+    padding: 4rem;
+  }
+} */
+
+.address-branch,
+.contacts,
+.contact-email {
+  margin-top: 2rem;
+}
+
+/*===================================================
+      FOOTER #5a035a;  #e67e22;  #41464b;
+===================================================*/
+
+.footer {
+  background-color: #41464b;
+  padding: 2rem 0;
+  font-size: 1.4rem;
+}
+
+/* @media (max-width: 37.5em) {
+  .footer {
+    font-size: 1.2rem;
+  }
+} */
+
+.foot-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20rem;
+}
+
+/* @media (max-width: 56.25em) {
+  .foot-nav {
+    margin: 0 8rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .foot-nav {
+    margin: 0 2rem;
+  }
+} */
+
+.footer-logo-box {
+  text-align: center;
+}
+
+/* @media (max-width: 56.25em) {
+  .footer-logo-box {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .footer-logo-box {
+    margin-bottom: 3rem;
+  }
+} */
+
+.footer-logo img {
+  width: 10rem;
+  height: auto;
+}
+
+/* @media (max-width: 56.25em) {
+  .footer-logo-img {
+    width: 8rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .footer-logo-img {
+    width: 5rem;
+  }
+} */
+
+.footer-navigation {
+  border-top: 1px solid #777;
+  display: flex;
+  padding-top: 1rem;
+  align-self: flex-end;
+}
+
+/* @media (max-width: 56.25em) {
+  .footer-navigation {
+    width: 100%;
+    text-align: center;
+  }
+} */
+
+/* @media (max-width: 37.5em) {
+  .footer-navigation {
+    width: 100%;
+    text-align: center;
+  }
+} */
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-item {
+  display: inline-block;
+}
+
+.footer-item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.footer-link,
+.footer:visited {
+  color: whitesmoke;
+  background-color: #41464b;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.footer-link:hover,
+.footer-link:active,
+.footer:visited:hover,
+.footer:visited:active {
+  background-color: #e67e22;
+  color: #5a035a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.9);
+  transform: rotate(5deg) scale(1.2);
+}
+
+.footer-copyright {
+  color: #eee;
+  border-top: 1px solid #777;
+  padding-top: 1rem;
+  letter-spacing: 1.5px;
+  align-self: flex-end;
+}
+
+/* @media (max-width: 37.5em) {
+  .footer-copyright {
+    width: 100%;
+  }
+} */

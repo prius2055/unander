@@ -1,0 +1,222 @@
+@media screen and (min-width: 768px) {
+  /*
+      BREAKPOINTS
+      0 - 600px:          phone               :phone
+      600 - 900px:        tablet-portrait     :tab-port
+      900 - 1200px:       tablet-landscape    :tab-land
+      [1200 - 1800px]:    big-desktop         :big-desktop
+      
+      
+      color1:#e67e22;
+      
+       color2: #5a035a;
+      
+       color3:#2e3135;
+      
+      
+      */
+
+  /*======================================================
+                              ALL INITIALLIZATIONS
+  ========================================================*/
+
+  .heading-primary {
+    color: whitesmoke;
+    text-align: center;
+  }
+
+  .heading-primary--main {
+    font-size: 4rem;
+    letter-spacing: 2rem;
+  }
+
+  .heading-primary--sub {
+    font-size: 1.8rem;
+    letter-spacing: 0.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+  .heading-tetiary {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  /* BUTTONS */
+
+  .btn,
+  .btn:visited {
+    border-radius: 10rem;
+    padding: 2rem 4rem;
+  }
+
+  .btn--white {
+    font-size: 1.2rem;
+  }
+
+  .btn-back-to-top {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  /*======================================================
+                              SECTION NAVIGATION
+  ========================================================*/
+
+  .sm-screen-header-nav {
+    display: none;
+  }
+  /*======================================================
+                              SECTION HEADER
+  ========================================================*/
+
+  .header {
+    height: 75vh;
+  }
+
+  .header-nav {
+    background-color: #41464b;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5rem;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+  }
+
+  .sm-screen-header-nav {
+    display: none;
+  }
+
+  .header__logo {
+    height: 5rem;
+  }
+
+  .slide p {
+    top: 10%;
+    font-size: 4rem;
+  }
+
+  /*===================================================
+                         SECTION INFO
+  ===================================================*/
+
+  .info-left-img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .info-image {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    display: block;
+  }
+
+  /*===================================================
+                       SECTION SERVICES #5a035a;  #e67e22;
+  ===================================================*/
+  .section-services {
+    max-width: 80%;
+    margin-top: 5rem;
+  }
+
+  .service-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 50%;
+    margin-bottom: 1rem;
+    height: 50rem;
+  }
+  .card-heading {
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+
+  /*===================================================
+                         SECTION ABOUT US
+  ===================================================*/
+  .section-about {
+    max-width: 80%;
+  }
+
+  /*===================================================
+                         SECTION CLIENTS
+  ===================================================*/
+
+  .section-clients {
+    margin-top: 5rem;
+  }
+
+  /*===================================================
+              SECTION CONTACT #5a035a;  #e67e22;  #41464b;
+  ===================================================*/
+  .section-contact {
+    max-width: 100%;
+    margin: 2rem auto 0 auto;
+    background-color: #e67e22;
+  }
+
+  .heading-contact {
+    padding-left: 12rem;
+  }
+
+  .contact-details {
+    background-image: linear-gradient(
+        82deg,
+        rgba(245, 245, 245, 0.79) 0%,
+        rgba(245, 245, 245, 0.79) 45%,
+        transparent 45%
+      ),
+      url(img/contact-call-2.jpeg);
+
+    width: 100%;
+    padding: 1rem 12rem;
+    font-size: 1.8rem;
+  }
+
+  /*===================================================
+              FOOTER #5a035a;  #e67e22;  #41464b;
+   ===================================================*/
+
+  .footer {
+    background-color: #41464b;
+    padding: 2rem 0;
+    font-size: 1.4rem;
+  }
+
+  .foot-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 6rem;
+  }
+
+  .footer-logo-box {
+    text-align: center;
+  }
+
+  .footer-logo img {
+    width: 4rem;
+    height: auto;
+    display: block;
+  }
+
+  .footer-item:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .footer-copyright {
+    letter-spacing: 1.5px;
+  }
+}

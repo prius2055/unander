@@ -1,0 +1,66 @@
+@media screen and (min-width: 576px) {
+  
+  /*===================================================
+                     SECTION ABOUT US
+    ===================================================*/
+
+  .section-about {
+    /* padding: 8rem 0; */
+
+    padding-top: 2rem;
+    max-width: 80rem;
+    margin: 2rem auto;
+  }
+
+  .bg-video-content {
+    top: 50px;
+  }
+
+  /*===================================================
+                     SECTION CLIENTS
+    ===================================================*/
+
+  .section-clients {
+    padding-top: 8rem;
+    max-width: 70rem;
+    margin: 2rem auto;
+  }
+
+  .client-container {
+    margin: 0 5rem;
+  }
+
+  .client {
+    color: #41464b;
+  }
+
+  /*===================================================
+          SECTION CONTACT #5a035a;  #e67e22;  #41464b;
+    ===================================================*/
+  .section-contact {
+    max-width: 80rem;
+    margin: 2rem auto 0 auto;
+    background-color: #e67e22;
+  }
+  .contact-details {
+    background-image: linear-gradient(
+        105deg,
+        rgba(245, 245, 245, 0.79) 0%,
+        rgba(245, 245, 245, 0.79) 48%,
+        transparent 45%
+      ),
+      url(img/contact-call-2.jpeg);
+  }
+
+  /*===================================================
+          FOOTER #5a035a;  #e67e22;  #41464b;
+    ===================================================*/
+
+  .footer-item:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .footer-copyright {
+    letter-spacing: 2px;
+  }
+}

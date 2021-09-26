@@ -1,0 +1,483 @@
+@media screen and (min-width: 1024px) {
+  /*
+BREAKPOINTS
+0 - 600px:          phone               :phone
+600 - 900px:        tablet-portrait     :tab-port
+900 - 1200px:       tablet-landscape    :tab-land
+[1200 - 1800px]:    big-desktop         :big-desktop
+
+
+color1:#e67e22;
+
+ color2: #5a035a;
+
+ color3:#2e3135;
+
+
+*/
+
+  /*======================================================
+                        ALL INITIALLIZATIONS
+    ========================================================*/
+
+  .heading-primary--main {
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    font-weight: 400;
+  }
+
+  .heading-primary--sub {
+    font-size: 2rem;
+    letter-spacing: 1.75rem;
+
+    font-weight: 700;
+  }
+
+  .heading-secondary {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    letter-spacing: 0.2rem;
+  }
+
+  .heading-tetiary {
+    font-size: 1.6rem;
+  }
+
+  .paragraph {
+    font-size: 1.6rem;
+  }
+
+  /* BUTTONS */
+
+  .btn,
+  .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10rem;
+    padding: 2rem 4rem;
+    position: relative;
+    transition: all 0.2s;
+    /* HERE WE USE THE TRANSITION PROPERTY FOR ANIMATION*
+                                IT IS PLACED AT THR link/parent STATE OF THE OBJECT TO BE ANIMATED,
+                                WITH all MEANING THAT ALL THE PROPERTY IN THE hover, active 
+                                and every other state SHOULD BE ANIMATED*/
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-back-to-top {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  /*======================================================
+                        SECTION NAVIGATION
+    ========================================================*/
+
+  .navigation-item {
+    margin: 5px;
+  }
+
+  .navigation-link,
+  .navigation-link:visited {
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      #e67e22 50%
+    );
+    background-size: 210%;
+    /*MAKES THE background MORE THAN TWICE ITS SIZE AT THAT GIVEN POSITION*/
+    transition: all 0.4s;
+  }
+
+  .navigation-link:hover,
+  .navigation-link:active {
+    background-position: 100%;
+    color: #000;
+  }
+
+  .sm-screen-header-nav {
+    display: none;
+  }
+  /*======================================================
+                        SECTION HEADER
+    ========================================================*/
+
+  .header-nav {
+    background-color: #41464b;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5rem;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+  }
+
+  .header__logo {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .header-cover {
+    flex-direction: row;
+  }
+
+  .slider {
+    width: 60%;
+    height: 75vh;
+  }
+
+  .slide p {
+    top: 15%;
+  }
+
+  .header-cover-right {
+    width: 40%;
+  }
+
+  /*===================================================
+                   SECTION INFO
+  ===================================================*/
+  .section-info {
+    border: none;
+
+    max-width: 80%;
+    margin: 2rem auto;
+  }
+
+  .info-heading-box {
+    justify-content: space-between;
+  }
+
+  .info-join {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+
+  .info-heading-sm {
+    font-size: 2rem;
+  }
+
+  .info {
+    border-right: 3px solid #41464b;
+    padding: 1rem;
+    margin: 0 0.5rem;
+  }
+
+  .info-right {
+    font-size: 2rem;
+  }
+
+  .info-left-img {
+    fill: white;
+    height: 4.8rem;
+    width: 4.8rem;
+    margin-left: 1.8rem;
+  }
+
+  .info-image {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+  }
+
+  /*===================================================
+                 SECTION SERVICES #5a035a;  #e67e22;
+  ===================================================*/
+  .section-services {
+    border: none;
+
+    max-width: 80%;
+    margin: 8rem auto;
+  }
+
+  .card {
+    width: 22%;
+    height: 52rem;
+  }
+
+  .card-side {
+    height: 100%;
+
+    width: 100%;
+    border-radius: 1rem;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+
+    transition: all 0.8s ease;
+  }
+
+  .card-side-front {
+    background-color: #fff;
+  }
+
+  .card-side-back {
+    background-image: linear-gradient(
+      to left top,
+      rgba(255, 185, 0, 0.85),
+      rgba(255, 119, 48, 0.85)
+    );
+    transform: rotateY(-180deg);
+    position: relative;
+  }
+
+  .card:hover {
+    transform: translateY(4rem);
+  }
+
+  .card:hover .card-side-back {
+    transform: rotateY(0deg);
+  }
+
+  .card:hover .card-side-front {
+    transform: rotateY(-180deg);
+  }
+
+  .card-picture {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+  }
+
+  .card-picture-1 {
+    background-image: url(img/me-works.jpg);
+  }
+
+  .card-picture-2 {
+    background-image: url(img/ee-works-2.jpg);
+  }
+
+  .card-picture-3 {
+    background-image: url(img/ff-work.jpg);
+  }
+
+  .card-picture-4 {
+    background-image: url(img/safety-work.jpg);
+  }
+
+  .card-heading {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 400;
+    position: absolute;
+    text-align: right;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  .card-heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    /*THIS MAKES A SINGLE OBJECT BEHAVE LIKE TWO BLOCK ELEMENTS.THUS, 
+                                                    ANY PROPERTY SPECIFIED ON THE ELEMENT APPLIES TO THE OTHER 
+                                                    PARTS OF THE ELEMENT AS THOUGH THE ELEMENTS ARE SEPARATE BLOCKS,
+                                                    IN THIS CASE THE padding PROPERTY IS APPLIED TO THE TWO LINE BREAKS
+                                                    OF THE ELEMENT, MAKING THE LINE BREAKS BEHAVE LIKE TWO DIFFERENT
+                                                    BLOCK ELEMENTS*/
+    box-decoration-break: clone;
+  }
+
+  .card-heading-span-1 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(41, 152, 255, 0.85),
+      rgba(86, 67, 250, 0.85)
+    );
+  }
+
+  .card-heading-span-2 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 185, 0, 0.85),
+      rgba(255, 119, 48, 0.85)
+        /* rgba(241, 73, 7, 0.85),
+      rgba(253, 53, 4, 0.85) */
+    );
+  }
+
+  .card-heading-span-4 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(248, 99, 99, 0.85),
+      rgba(255, 0, 0, 0.85)
+    );
+  }
+
+  .card-heading-span-5 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(95, 247, 95, 0.85),
+      rgba(0, 128, 0, 0.85)
+    );
+  }
+
+  .card-details {
+    padding: 3rem;
+    text-align: center;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .card-details ul {
+    margin: 0 auto;
+    list-style: none;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 700;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-details ul li {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+    background-color: #5a035a;
+    transition: all 0.2s ease;
+  }
+
+  .card-details ul li:hover {
+    transform: scale(1.2);
+  }
+
+  /*===================================================
+                   SECTION ABOUT US
+  ===================================================*/
+  .section-about {
+    max-width: 80%;
+    margin: 3rem auto;
+  }
+
+  .about-container {
+    flex-direction: row;
+  }
+
+  .about-container-left {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  .about-container-right {
+    height: 70rem;
+    width: 50%;
+
+    clip-path: polygon(
+      20% 0%,
+      80% 0%,
+      100% 20%,
+      100% 80%,
+      80% 100%,
+      20% 100%,
+      0% 80%,
+      0% 20%
+    );
+  }
+
+  .bg-video-content {
+    top: 10px;
+    left: 300px;
+  }
+
+  /*===================================================
+                   SECTION CLIENTS
+  ===================================================*/
+
+  .section-clients {
+    max-width: 80%;
+    margin: 5rem auto;
+  }
+
+  .client-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /*===================================================
+        SECTION CONTACT #5a035a;  #e67e22;  #41464b;
+  ===================================================*/
+
+  .section-contact {
+    max-width: 80%;
+    margin: 5rem auto;
+    background: none;
+  }
+
+  .heading-contact {
+    padding-left: 0;
+  }
+
+  .contact-details {
+    background-position: center;
+    color: #41464b;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5rem 0 5rem 15rem;
+  }
+
+  .contact-details p,
+  .contact-details span {
+    font-size: 2rem;
+  }
+
+  .address-branch,
+  .contacts,
+  .contact-email {
+    margin-top: 4rem;
+  }
+
+  /*===================================================
+        FOOTER #5a035a;  #e67e22;  #41464b;
+  ===================================================*/
+
+  .footer {
+    font-size: 1.6rem;
+  }
+
+  .foot-nav {
+    margin: 0 5rem;
+  }
+
+  .footer-logo img {
+    width: 10rem;
+    height: auto;
+  }
+
+  .footer-item:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  .footer-copyright {
+    letter-spacing: 2.5px;
+  }
+}
